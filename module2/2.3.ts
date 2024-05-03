@@ -16,6 +16,12 @@ const users: GenericType<{ name: string, age: number }> = [
         age: 98
     },
     {
-        kaj: 'nai'
+        name: "roktim",
+        age: 7
     }
+
 ]
+type GenericTuple<x, y> = [x, y]
+
+
+const namse: GenericTuple<string, { name: string, age: number }> = ["mr,zahid", { name: "rahim ", age: 55 }]
