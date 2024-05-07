@@ -10,4 +10,4 @@ const addCourseToStudent = <T extends { id: number; name: string; age: number }>
 
 
 console.log(addCourseToStudent({ id: 88, name: "sifat", age: 55 }))
-console.log(addCourseToStudent({ emni: "sonti monti" }))
+console.log(addCourseToStudent({ id: 22, name: "s", age: 33, emni: "sonti monti" }))
