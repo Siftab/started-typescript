@@ -1,8 +1,11 @@
 {
     // Promise
+    interface something {
+        something: string
+    }
     const createPromise = () => {
-        return new Promise((resolve, reject) => {
-            const data = false
+        return new Promise<{ something: string }>((resolve, reject) => {
+            const data: { something: string } = { something: "something" }
             if (data) {
                 resolve(data)
 
@@ -13,9 +16,16 @@
         })
 
     }
-    const showData = async () => {
+    const showData = async (): Promise<something> => {
         const data = await createPromise();
         console.log(data)
+        return data
     }
     showData()
+    const getTodos = async () => {
+        const res = await fetch('https://jsonplaceholder.typicode.com/todos ')
+        const data = await res.json()
+        console.log(data)
+    }
+    getTodos()
 }
