@@ -1,6 +1,6 @@
 {
     //
-    interface Developer<T, x> {
+    interface Developer<T, x = null> {
         name: string;
         computer: {
             brand: string;
@@ -33,7 +33,8 @@
             model: "kw66",
             display: "oled"
 
-        }
+        },
+        bike:
     }
     const ricjDeveloper: Developer<applewatch> = {
         name: "mr.rich",
