@@ -5,4 +5,4 @@ type person = {
     contact: string
 }
 
-type Name = Pick<person, "name">
+type Name = Pick<person, "name" | "age">
