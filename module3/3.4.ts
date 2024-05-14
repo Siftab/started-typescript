@@ -25,14 +25,23 @@ const tiger = new Animal("tiger", "tiger")
 const dog = new Dog("pool", "dog")
 const cat = new Cat("mini", "cat")
 
+const isDog = (animal: Animal): animal is Dog => {
+    return animal instanceof Dog
+
+}
+const isCat = (animal: Animal): animal is Cat => {
+    return animal instanceof Cat
+
+}
+
 // const dog = new Animal("maxi", "dog")
 // const cat = new Animal("mini", "cat")
 // cat.makeMeaw()
 const getSound = (animal: Animal) => {
-    if (animal instanceof Dog) {
+    if (isDog(animal)) {
         animal.makeBark()
     }
-    else if (animal instanceof Cat) {
+    else if (isCat(animal)) {
         animal.makeMeaw()
     }
     else {
