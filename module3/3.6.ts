@@ -1,5 +1,4 @@
 {
-
     class BankAccount {
         readonly id: number;
         name: string
@@ -10,22 +9,23 @@
                 this._balance = _balance
 
         }
-        addBalance(ammount: number) {
+        // addBalance(ammount: number) {
+        //     this._balance = this._balance + ammount
+
+
+        // }
+        // showBalance() {
+        //     return this._balance
+        // }
+        set deposit(ammount: number) {
             this._balance = this._balance + ammount
-
-
         }
-        showBalance() {
+        get Balance() {
             return this._balance
         }
     }
 
-    const goribManus = new BankAccount(112, "sifat", 20)
-    goribManus
-    console.log(goribManus.showBalance())
-    class Roktim extends BankAccount {
-
-
-    }
-
+    const gorib = new BankAccount(11, "sifat", 445)
+    gorib.deposit = 44
+    console.log(gorib.Balance)
 }
